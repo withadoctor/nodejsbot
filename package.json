@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "r": "node index.js"
+    "r": "node index.js",
+    "q": "node index.js qa"
   },
   "dependencies": {
     "discord.js": "^11.5.1"
