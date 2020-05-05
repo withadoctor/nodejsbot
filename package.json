@@ -8,6 +8,9 @@
     "q": "node index.js qa"
   },
   "dependencies": {
+    "moment": "^2.20.1",
+    "moment-duration-format": "^2.2.1",
+    "moment-timezone": "^0.5.28",
     "discord.js": "^11.5.1"
   }
 }
