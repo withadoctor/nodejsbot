@@ -19,7 +19,7 @@ function checkContinuousChatting(bot, message) {
     if(isSponsor && isBest_Talker) return;
 
     // 관리자는 도배 걸리지 않음.
-    if(message.member.hasPermission('ADMINISTRATOR')) return;
+    if(message.member.permissions.has('ADMINISTRATOR')) return;
 
     // 시간, 뮤트 롤
     let messageTime = moment().tz('Asia/Seoul').locale('ko').valueOf()
