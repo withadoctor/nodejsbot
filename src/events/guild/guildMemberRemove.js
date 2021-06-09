@@ -1,5 +1,5 @@
 // const byeChannelName = "안녕히가세욜" // 퇴장 시 메시지를 전송 할 채널의 이름을 입력하세요.
-const byeChannelName = 794119277703462942 // 퇴장 시 메시지를 전송 할 채널의 이름을 입력하세요.
+const byeChannelName = 794119306291052564 // 퇴장 시 메시지를 전송 할 채널의 이름을 입력하세요.
 const byeChannelComment = "안녕히가세요." // 퇴장 시 전송할 메시지의 내용을 입력하세요.
 
 module.exports = async (bot, member) => {
