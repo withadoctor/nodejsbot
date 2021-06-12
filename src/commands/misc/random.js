@@ -7,6 +7,7 @@ module.exports = {
         accessableby: "Members",
     },
     run: async (bot, message, args) => {
+        if(args.length <= 0) return message.reply('대답할 단어를 입력해주세요.')
         let min = 0;
         let max = args.length;
         let index = parseInt(Math.random() * (max - min) + min);

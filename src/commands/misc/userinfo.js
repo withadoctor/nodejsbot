@@ -23,31 +23,30 @@ module.exports = {
 		let common = [
 			{
 				name: 'User',
-				value: [
-					`**❯ Username:** ${member.user.username}`,
-					`**❯ Discriminator:** ${member.user.discriminator}`,
-					`**❯ ID:** ${member.id}`,
-					`**❯ Avatar:** [Link to avatar](${member.user.displayAvatarURL()})`,
-					`**❯ Time Created:** ${moment(member.user.createdTimestamp).locale('ko').format('ll dddd LTS')} , ${moment(member.user.createdTimestamp).locale('ko').fromNow()}`,
-					`\u200b`
-				],
+				value: `
+**❯ Username:** ${member.user.username}
+**❯ Discriminator:** ${member.user.discriminator}
+**❯ ID:** ${member.id}
+**❯ Avatar:** [Link to avatar](${member.user.displayAvatarURL()})
+**❯ Time Created:** ${moment(member.user.createdTimestamp).locale('ko').format('ll dddd LTS')} , ${moment(member.user.createdTimestamp).locale('ko').fromNow()}
+				`,
 			},
 			{
 				name: 'Member',
-				value: [
-					`**❯ Highest Role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
-					`**❯ Server Join Date:** ${moment(member.joinedAt).locale('ko').format('LL LTS')}`,
-					`**❯ Hoist Role:** ${member.roles.cache.hoist ? member.roles.cache.hoist.name : 'None'}`,
-					`**❯ Roles [${roles.length}]:** ${roles.length < 10 ? roles.join(', ') : roles.length > 10 ? this.client.utils.trimArray(roles) : 'None'}`,
-				],
+				value: `
+**❯ Highest Role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}
+**❯ Server Join Date:** ${moment(member.joinedAt).locale('ko').format('LL LTS')}
+**❯ Hoist Role:** ${member.roles.cache.hoist ? member.roles.cache.hoist.name : 'None'}
+**❯ Roles [${roles.length}]:** ${roles.length < 10 ? roles.join(', ') : roles.length > 10 ? this.client.utils.trimArray(roles) : 'None'}
+				`,
 			},
 		]
 		let mute = {
 			name: 'Mute Free',
-			value: [
-				`❯ 뮤트로부터 자유로운자`,
-				`(단, 관리자가 직접 뮤트를 줄 때는 먹어야함..)`,
-			],
+			value: `
+❯ 뮤트로부터 자유로운자
+(단, 관리자가 직접 뮤트를 줄 때는 먹어야함..)
+			`,
 		}
 
 		const embed = new MessageEmbed()

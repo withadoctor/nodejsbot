@@ -9,7 +9,7 @@ module.exports = {
         accessableby: "Administrators",
     },
     run: async (bot, message, args) => {
-        if(!message.member.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"])) return message.channel.send("You dont have permission to perform this command!")
+        if(!message.member.permissions.has(["KICK_MEMBERS", "ADMINISTRATOR"])) return message.channel.send("You dont have permission to perform this command!")
 
         let kickMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]) 
         if(!kickMember) return message.channel.send("Please provide a user to kick!")
@@ -17,7 +17,7 @@ module.exports = {
         let reason = args.slice(1).join(" ")
         if(!reason) reason = "그냥 강퇴다 임마."
 
-        if(!message.guild.me.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"])) return message.channel.send("I dont have permission to do this!")
+        if(!message.guild.me.permissions.has(["KICK_MEMBERS", "ADMINISTRATOR"])) return message.channel.send("I dont have permission to do this!")
 
         kickMember.send(`안녕! 넌 \`\`${message.guild.name}\`\`에서 강퇴당했어!\n이유 -> \`\`${reason}\`\``).then(() => 
         kickMember.kick()).catch(err => console.log(err))
